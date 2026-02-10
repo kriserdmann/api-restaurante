@@ -111,7 +111,7 @@ export default function Produtos() {
           <h1 className="text-4xl font-extrabold text-zinc-50 tracking-tight">Produtos</h1>
           <p className="text-zinc-500 mt-2">Gerencie os itens do cardápio</p>
         </div>
-        <Link to="/produtos/novo">
+        <Link to="/dashboard/produtos/novo">
           <Button data-testid="btn-novo-produto" className="bg-orange-600 hover:bg-orange-500">
             <Plus className="h-4 w-4 mr-2" />
             Novo Produto
@@ -203,7 +203,7 @@ export default function Produtos() {
                     R$ {produto.preco.toFixed(2).replace('.', ',')}
                   </span>
                   <div className="flex gap-2">
-                    <Link to={`/produtos/editar/${produto.id}`}>
+                    <Link to={`/dashboard/produtos/editar/${produto.id}`}>
                       <Button 
                         data-testid={`btn-editar-${produto.id}`}
                         variant="ghost" 
@@ -260,7 +260,7 @@ export default function Produtos() {
                 ? "Tente ajustar os filtros de busca" 
                 : "Comece adicionando seu primeiro produto"}
             </p>
-            <Link to="/produtos/novo" className="mt-6">
+            <Link to="/dashboard/produtos/novo" className="mt-6">
               <Button className="bg-orange-600 hover:bg-orange-500">
                 <Plus className="h-4 w-4 mr-2" />
                 Adicionar Produto
