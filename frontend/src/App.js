@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Toaster } from "./components/ui/sonner";
-import { Layout } from "./components/Layout";
+import { AdminLayout } from "./components/AdminLayout";
 import Dashboard from "./pages/Dashboard";
 import Produtos from "./pages/Produtos";
 import NovoProduto from "./pages/NovoProduto";
 import EditarProduto from "./pages/EditarProduto";
-import ApiDocs from "./pages/ApiDocs";
+import ApiDocsPublic from "./pages/ApiDocsPublic";
 import "@/App.css";
 
 function App() {
@@ -14,13 +14,17 @@ function App() {
       <div className="noise-overlay" />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          {/* Página pública - Documentação da API */}
+          <Route path="/" element={<ApiDocsPublic />} />
+          
+          {/* Painel Administrativo */}
+          <Route path="/dashboard" element={<AdminLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="produtos" element={<Produtos />} />
             <Route path="produtos/novo" element={<NovoProduto />} />
             <Route path="produtos/editar/:id" element={<EditarProduto />} />
-            <Route path="documentacao" element={<ApiDocs />} />
           </Route>
+          
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
