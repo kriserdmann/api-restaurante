@@ -84,7 +84,7 @@ const ProductCard = ({ produto }) => {
           <span className="text-xl font-bold text-orange-500 price">
             R$ {produto.preco.toFixed(2).replace('.', ',')}
           </span>
-          <Link to={`/produtos/editar/${produto.id}`}>
+          <Link to={`/dashboard/produtos/editar/${produto.id}`}>
             <Button variant="ghost" size="sm" className="text-zinc-400 hover:text-orange-500">
               Editar
               <ArrowRight className="h-4 w-4 ml-1" />
@@ -191,7 +191,7 @@ export default function Dashboard() {
             <h2 className="text-2xl font-bold text-zinc-50">Produtos em Destaque</h2>
             <p className="text-zinc-500 text-sm mt-1">Itens marcados como destaque no cardápio</p>
           </div>
-          <Link to="/produtos">
+          <Link to="/dashboard/produtos">
             <Button variant="outline" className="border-zinc-700 hover:bg-zinc-800 hover:border-orange-500/50">
               Ver Todos
               <ArrowRight className="h-4 w-4 ml-2" />
@@ -211,7 +211,7 @@ export default function Dashboard() {
               <Star className="h-12 w-12 text-zinc-700 mb-4" />
               <h3 className="text-lg font-medium text-zinc-400">Nenhum produto em destaque</h3>
               <p className="text-sm text-zinc-600 mt-1">Marque produtos como destaque para exibi-los aqui</p>
-              <Link to="/produtos/novo" className="mt-4">
+              <Link to="/dashboard/produtos/novo" className="mt-4">
                 <Button className="bg-orange-600 hover:bg-orange-500">
                   Adicionar Produto
                 </Button>
@@ -230,16 +230,16 @@ export default function Dashboard() {
           </CardTitle>
         </CardHeader>
         <CardContent className="flex flex-wrap gap-4">
-          <Link to="/produtos/novo">
+          <Link to="/dashboard/produtos/novo">
             <Button className="bg-orange-600 hover:bg-orange-500">
               Adicionar Novo Produto
             </Button>
           </Link>
-          <Link to="/documentacao">
+          <a href="/">
             <Button variant="outline" className="border-zinc-700 hover:bg-zinc-800">
               Ver Documentação da API
             </Button>
-          </Link>
+          </a>
         </CardContent>
       </Card>
     </div>
