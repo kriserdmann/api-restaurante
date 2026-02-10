@@ -89,7 +89,7 @@ export default function EditarProduto() {
         preco
       });
       toast.success("Produto atualizado com sucesso!");
-      navigate("/produtos");
+      navigate("/dashboard/produtos");
     } catch (error) {
       console.error("Erro ao atualizar produto:", error);
       toast.error("Erro ao atualizar produto");
@@ -110,7 +110,7 @@ export default function EditarProduto() {
     <div data-testid="editar-produto-page" className="space-y-8 animate-fade-in max-w-4xl">
       {/* Header */}
       <div className="flex items-center gap-4">
-        <Link to="/produtos">
+        <Link to="/dashboard/produtos">
           <Button variant="ghost" size="icon" className="text-zinc-400 hover:text-zinc-50">
             <ArrowLeft className="h-5 w-5" />
           </Button>

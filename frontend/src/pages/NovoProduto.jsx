@@ -67,7 +67,7 @@ export default function NovoProduto() {
         preco
       });
       toast.success("Produto criado com sucesso!");
-      navigate("/produtos");
+      navigate("/dashboard/produtos");
     } catch (error) {
       console.error("Erro ao criar produto:", error);
       toast.error("Erro ao criar produto");
@@ -80,7 +80,7 @@ export default function NovoProduto() {
     <div data-testid="novo-produto-page" className="space-y-8 animate-fade-in max-w-4xl">
       {/* Header */}
       <div className="flex items-center gap-4">
-        <Link to="/produtos">
+        <Link to="/dashboard/produtos">
           <Button variant="ghost" size="icon" className="text-zinc-400 hover:text-zinc-50">
             <ArrowLeft className="h-5 w-5" />
           </Button>
