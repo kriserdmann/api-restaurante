@@ -56,7 +56,7 @@ export default function EditarProduto() {
       } catch (error) {
         console.error("Erro ao carregar produto:", error);
         toast.error("Produto não encontrado");
-        navigate("/produtos");
+        navigate("/dashboard/produtos");
       } finally {
         setLoading(false);
       }
