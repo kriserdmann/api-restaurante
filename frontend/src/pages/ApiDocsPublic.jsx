@@ -529,16 +529,10 @@ curl -X POST ${API_BASE}/api/seed`} />
 
       {/* Footer */}
       <footer className="border-t border-zinc-800 mt-16">
-        <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-6 py-8 text-center">
           <p className="text-sm text-zinc-500">
             API para fins educacionais • Ideal para aprender consumo de APIs REST
           </p>
-          <Link to="/dashboard">
-            <Button variant="ghost" className="text-zinc-400 hover:text-orange-500">
-              <Settings className="h-4 w-4 mr-2" />
-              Acessar Painel Administrativo
-            </Button>
-          </Link>
         </div>
       </footer>
     </div>
