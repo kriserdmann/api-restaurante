@@ -298,12 +298,6 @@ export default function ApiDocsPublic() {
               <p className="text-xs text-zinc-500">API Educacional de Restaurante</p>
             </div>
           </div>
-          <Link to="/dashboard">
-            <Button variant="outline" className="border-zinc-700 hover:bg-zinc-800 hover:border-orange-500/50">
-              <Settings className="h-4 w-4 mr-2" />
-              Painel Admin
-            </Button>
-          </Link>
         </div>
       </header>
 
@@ -321,7 +315,7 @@ export default function ApiDocsPublic() {
               API RESTful para consulta e gerenciamento do cardápio de um restaurante. 
               Ideal para estudantes aprenderem a consumir APIs em aplicações frontend.
             </p>
-            <div className="flex flex-wrap gap-4 mt-8">
+            <div className="mt-8">
               <Button
                 data-testid="btn-seed"
                 onClick={handleSeed}
@@ -331,12 +325,6 @@ export default function ApiDocsPublic() {
                 <Database className="h-4 w-4 mr-2" />
                 Popular Banco (15 itens)
               </Button>
-              <Link to="/dashboard">
-                <Button variant="outline" className="border-zinc-700 hover:bg-zinc-800">
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  Acessar Painel
-                </Button>
-              </Link>
             </div>
           </div>
         </div>
